@@ -2,7 +2,7 @@
 import requests,sys,json
 from get_key import get_key
 
-def hybrid_query(ip):
+def hybrid_query(query,type):
 	'''	Queries hybrid analysis for informationn\n
 	Hybrid is a great resource to see what activities the IP address was involved in
 	Usage:
@@ -12,7 +12,12 @@ def hybrid_query(ip):
 	key = get_key("Hybrid")  # Get the key from config file, Change it as necessary
 	url = "https://www.hybrid-analysis.com/api/v2/search/terms"  # The api url
 	headers={"api-key":key,"user-agent":"Falcon Sandbox","accept":"application/json"}  # The request headers
-	data={"host":ip}  # The data to post
+	if type == "domain":
+		data={"domain":query}  # The data to post
+	elif type == "ip":
+		data={"host":query}
+	else:
+		return
 	resp = requests.post(url,headers=headers,data=data)
 	response = json.loads(resp.text)
 
@@ -35,5 +40,5 @@ def hybrid_query(ip):
 format(verdict,av_detect,threat_score,hash,submit_name,analyzed_in)
 			print(msg)
 
-hybrid_query(sys.argv[1])
+hybrid_query(sys.argv[1],"domain")
 
