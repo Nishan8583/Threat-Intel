@@ -28,6 +28,8 @@ def check_who_ip(address):
 
 	obj = IPWhois(address)
 	result = obj.lookup_rdap(depth=0)
-	pprint(result)
+	pprint(result) # Raw result
+	#msg =\
+	#'''ASN: {}, \nASN_COUNTRY: {}\nASN_DATE: {}\n Network:{} \n'''
 if __name__ == '__main__':
 	check_who_ip(sys.argv[1])
