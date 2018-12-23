@@ -1,3 +1,5 @@
 # Containes configuraiton such as API keys and others here
 # Format Source:Key
 Hybrid:w48gogsg44gockgwk0cg8gccsgksgccc004osws40ow8sok48swk0kcooks0kkkc
+cymon_key:8334d370b15337696b031fc04ec3bd0346753a04
+
