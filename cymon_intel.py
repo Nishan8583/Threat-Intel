@@ -12,11 +12,12 @@ def cymon_query(query,type):
 			Ex: cymon_key:<your key here>
 
 	Ex:
+		>>> from cymon_intel import cymon_query
 		For IP query
-		cymon_query("1.1.1.1","IP")
+		>>> cymon_query("1.1.1.1","IP")
 
 		For Domain Query
-		cymon_query("www.google.com","Domain")
+		>>> cymon_query("www.google.com","Domain")
 
 
 	Response For cymon Example:

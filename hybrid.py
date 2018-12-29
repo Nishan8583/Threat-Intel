@@ -40,5 +40,5 @@ def hybrid_query(query,type):
 format(verdict,av_detect,threat_score,hash,submit_name,analyzed_in)
 			print(msg)
 
-hybrid_query(sys.argv[1],"domain")
+#hybrid_query(sys.argv[1],"domain")
 

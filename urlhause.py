@@ -33,45 +33,4 @@ def urlhause(query):
 		for i in range(1,len(all_rows)):
 			get_tds = all_rows[i].find_all("td")
 			print("|Date: {}| 	|Link: {}|	 |Status: {}|	 |Tags: {}|	 |Reporter: {}|\n".format(get_tds[0].text,get_tds[1].text,get_tds[2].text,get_tds[3].text,get_tds[4].text))
-urlhause(sys.argv[1])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# IyBJIGZ1a2VuIGhhdGUgdmVyeXRoaW5nLCBpbmNsdWRpbmcgbXlzZWxm
+#urlhause(sys.argv[1])

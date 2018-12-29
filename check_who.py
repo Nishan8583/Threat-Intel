@@ -31,5 +31,5 @@ def check_who_ip(address):
 	pprint(result) # Raw result
 	#msg =\
 	#'''ASN: {}, \nASN_COUNTRY: {}\nASN_DATE: {}\n Network:{} \n'''
-if __name__ == '__main__':
-	check_who_ip(sys.argv[1])
+#if __name__ == '__main__':
+#	check_who_ip(sys.argv[1])
