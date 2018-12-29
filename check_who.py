@@ -11,13 +11,14 @@ def check_who_domain(domain):
 	try:
 		print("[+] Gathering Whois Information about the domain \n")
 		qob = whois.query(domain).__dict__  # Obtaining dictionary object from the domain object
-		message = \
-"Creation_date: Year: {} Month: {} Day: {} \nUpdated: Year: {} Month: {} Day: {}\nRegistrar: {} \nCreation_date: Year: {} Month: {} Day: {}".format(qob["creation_date"].year,qob["creation_date"].month,qob["creation_date"].day,qob["last_updated"].year,\
-		qob["last_updated"].month,qob["last_updated"].day,qob["registrar"],qob["expiration_date"].year,qob["expiration_date"].month,qob["expiration_date"].day)
-		print(message)
+		#pprint(qob)
+		#message = \
+#"Creation_date: Year: {} Month: {} Day: {} \nUpdated: Year: {} Month: {} Day: {}\nRegistrar: {} \nCreation_date: Year: {} Month: {} Day: {}".format(qob["creation_date"].year,qob["creation_date"].month,qob["creation_date"].day,qob["last_updated"].year,\
+		#qob["last_updated"].month,qob["last_updated"].day,qob["registrar"],qob["expiration_date"].year,qob["expiration_date"].month,qob["expiration_date"].day)
+		#print(message)
 	except:
 		print("[-] Could not get info, Are you sure you entered the right domain?...")
-
+	return qob
 
 def check_who_ip(address):
 	'''This function is responsible for gathering whois information about IP address\n
@@ -28,8 +29,10 @@ def check_who_ip(address):
 
 	obj = IPWhois(address)
 	result = obj.lookup_rdap(depth=0)
-	pprint(result) # Raw result
+	#pprint(result) # Raw result
+	return result
 	#msg =\
 	#'''ASN: {}, \nASN_COUNTRY: {}\nASN_DATE: {}\n Network:{} \n'''
 #if __name__ == '__main__':
-#	check_who_ip(sys.argv[1])
+	#check_who_ip(sys.argv[1])
+#	check_who_domain(sys.argv[1])
