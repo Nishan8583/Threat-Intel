@@ -1,7 +1,7 @@
 import shodan,sys
 from get_key import get_key
 
-def query(address,type):
+def shodan_query(address,type):
 	if type == "mal":
 		address = "category:malware " + address
 	key = get_key("shodan")
@@ -10,10 +10,11 @@ def query(address,type):
 
 	# query shodan
 	results = searcher.search(address)
+	#return results
 	print("Result found: {}".format(results['total']))
 
 	for result in results["matches"]:
 		print(result)
 
 
-#query_ip(sys.argv[1]"mal")
+#shodan_query(sys.argv[1]"mal")

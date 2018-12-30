@@ -48,14 +48,14 @@ def cymon_query(query,type):
 	https://cymon.io/api/docs/#!/ip/Malware_list
 """
 	api_key = get_key("cymon_key")
-	if type == "IP":
+	if type == "ip":
 		url = "https://cymon.io/api/nexus/v1/ip/{}/events".format(query)
-	elif type == "Domain":
+	elif type == "domain":
 		url = "https://cymon.io/api/nexus/v1/domain/{}".format(query)
 	headers = {"authorization": "Token {}".format(api_key)}
 	response = requests.get(url,headers=headers)
 	res = json.loads(response.text)
-	pprint(res)
+	return res
 
 
 #cymon_query("www.google.com","Domain")

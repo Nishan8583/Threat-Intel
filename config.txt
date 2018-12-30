@@ -1,6 +1,6 @@
 # Containes configuraiton such as API keys and others here
 # Format Source:Key
-Hybrid:w48gogsg44gockgwk0cg8gccsgksgccc004osws40ow8sok48swk0kcooks0kkkc
-cymon_key:8334d370b15337696b031fc04ec3bd0346753a04
-shodan:nFvHDEFlLEiS45D0a5a6TA272NmwVKTD
-malshare:71d021f01991ea2e8bb2184b75c75e6dde86ff4a31dc7911b328398f43f8e277
+Hybrid:
+cymon_key:
+shodan:
+malshare:
