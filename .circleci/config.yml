@@ -1,9 +1,5 @@
-commands:
-  sayhello:
-    description: "A very simple command for demonstration purposes"
-    parameters:
-      to:
-        type: string
-        default: "Hello World"
+jobs:
+  my-job:
+    executor: my-executor
     steps:
       - run: /bin/bash ../hello.sh
